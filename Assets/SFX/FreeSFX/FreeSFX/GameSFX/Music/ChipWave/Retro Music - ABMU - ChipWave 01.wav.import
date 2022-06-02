@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Retro Music - ABMU - ChipWave 01.wav-b853e5fe51265c16f78a92d881a3d335.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Music/ChipWave/Retro Music - ABMU - ChipWave 01.wav"
+dest_files=[ "res://.import/Retro Music - ABMU - ChipWave 01.wav-b853e5fe51265c16f78a92d881a3d335.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

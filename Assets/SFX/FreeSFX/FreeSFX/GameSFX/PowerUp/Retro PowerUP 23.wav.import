@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Retro PowerUP 23.wav-5e6f0800a8def1be5f1cba05463d3f4e.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/PowerUp/Retro PowerUP 23.wav"
+dest_files=[ "res://.import/Retro PowerUP 23.wav-5e6f0800a8def1be5f1cba05463d3f4e.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=1

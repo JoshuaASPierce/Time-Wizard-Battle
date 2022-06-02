@@ -1,0 +1,746 @@
+[gd_scene load_steps=132 format=2]
+
+[ext_resource path="res://Assets/Art/Placeholders/HUD/HUD_Diamond/Non-Aligned/left_bar.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Art/Placeholders/HUD/HUD_Diamond/Non-Aligned/mid_top.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Art/Placeholders/HUD/HUD_Diamond/Non-Aligned/right_bar.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Art/Placeholders/HUD/HUD_Diamond/Non-Aligned/backplate.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Art/Placeholders/HUD/HUD_Diamond/Non-Aligned/shadows.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Font/Bebas_Neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Art/Placeholders/HUD/HUD_Diamond/Non-Aligned/BackLeft.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Art/Placeholders/HUD/HUD_Diamond/Non-Aligned/BackRight.png" type="Texture" id=8]
+[ext_resource path="res://HUD.gd" type="Script" id=9]
+[ext_resource path="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/PickUp/Retro PickUp 18.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Blops/Retro Blop StereoUP 04.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Art/Placeholders/bruxaEdited-Sheet.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Art/Placeholders/spritesheet.png" type="Texture" id=13]
+[ext_resource path="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Magic/Retro Magic 54.wav" type="AudioStream" id=14]
+[ext_resource path="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Charge/Retro Charge 13.wav" type="AudioStream" id=15]
+[ext_resource path="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Events/Negative/Retro Negative Short 07.wav" type="AudioStream" id=16]
+[ext_resource path="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Events/Negative/Retro Negative Short 23.wav" type="AudioStream" id=17]
+[ext_resource path="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/PowerUp/Retro PowerUP 09.wav" type="AudioStream" id=18]
+[ext_resource path="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/PowerUp/Retro PowerUP StereoUP 05.wav" type="AudioStream" id=19]
+[ext_resource path="res://Assets/Art/Wizard Pack/Avatar.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Art/WitchAvatar.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Font/Oleo_Script_Swash_Caps/OleoScriptSwashCaps-Bold.ttf" type="DynamicFontData" id=22]
+[ext_resource path="res://Assets/Font/Tapestry/Tapestry-Regular.ttf" type="DynamicFontData" id=23]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "enemyWizard"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("enemyWizard:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 880, 335 ), Vector2( 700, 200 ), Vector2( 550, 335 ), Vector2( 700, 450 ), Vector2( 880, 335 ) ]
+}
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 12 )
+region = Rect2( 600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 100, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 12 )
+region = Rect2( 200, 100, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 12 )
+region = Rect2( 600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 12 )
+region = Rect2( 400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 12 )
+region = Rect2( 200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 12 )
+region = Rect2( 200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 12 )
+region = Rect2( 400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 12 )
+region = Rect2( 600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 13 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 13 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 13 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 13 )
+region = Rect2( 400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 13 )
+region = Rect2( 500, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 13 )
+region = Rect2( 600, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 13 )
+region = Rect2( 700, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 13 )
+region = Rect2( 800, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 13 )
+region = Rect2( 900, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 13 )
+region = Rect2( 100, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 13 )
+region = Rect2( 200, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 13 )
+region = Rect2( 300, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 13 )
+region = Rect2( 400, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 13 )
+region = Rect2( 500, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 13 )
+region = Rect2( 600, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 13 )
+region = Rect2( 700, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 13 )
+region = Rect2( 800, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 13 )
+region = Rect2( 900, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 200, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 13 )
+region = Rect2( 100, 200, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 13 )
+region = Rect2( 200, 200, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 13 )
+region = Rect2( 300, 200, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 13 )
+region = Rect2( 400, 200, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 13 )
+region = Rect2( 500, 200, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 13 )
+region = Rect2( 600, 200, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 13 )
+region = Rect2( 700, 200, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 13 )
+region = Rect2( 800, 200, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 13 )
+region = Rect2( 900, 200, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 300, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 13 )
+region = Rect2( 100, 300, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 13 )
+region = Rect2( 200, 300, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 13 )
+region = Rect2( 300, 300, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 13 )
+region = Rect2( 400, 300, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 13 )
+region = Rect2( 500, 300, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 13 )
+region = Rect2( 600, 300, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 13 )
+region = Rect2( 700, 300, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 13 )
+region = Rect2( 800, 300, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 13 )
+region = Rect2( 900, 300, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 400, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 13 )
+region = Rect2( 100, 400, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 13 )
+region = Rect2( 200, 400, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 13 )
+region = Rect2( 300, 400, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 13 )
+region = Rect2( 400, 400, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 13 )
+region = Rect2( 500, 400, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 13 )
+region = Rect2( 600, 400, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 13 )
+region = Rect2( 700, 400, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 13 )
+region = Rect2( 800, 400, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 13 )
+region = Rect2( 900, 400, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 500, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 13 )
+region = Rect2( 100, 500, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 13 )
+region = Rect2( 200, 500, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 13 )
+region = Rect2( 300, 500, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 13 )
+region = Rect2( 400, 500, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 13 )
+region = Rect2( 500, 500, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 13 )
+region = Rect2( 600, 500, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 13 )
+region = Rect2( 700, 500, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 13 )
+region = Rect2( 800, 500, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 13 )
+region = Rect2( 900, 500, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 600, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 13 )
+region = Rect2( 100, 600, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 13 )
+region = Rect2( 200, 600, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 13 )
+region = Rect2( 300, 600, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 13 )
+region = Rect2( 400, 600, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 13 )
+region = Rect2( 500, 600, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 13 )
+region = Rect2( 600, 600, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 13 )
+region = Rect2( 700, 600, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 13 )
+region = Rect2( 800, 600, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 13 )
+region = Rect2( 900, 600, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 700, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 13 )
+region = Rect2( 100, 700, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 13 )
+region = Rect2( 200, 700, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 13 )
+region = Rect2( 300, 700, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 13 )
+region = Rect2( 400, 700, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 13 )
+region = Rect2( 500, 700, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 13 )
+region = Rect2( 600, 700, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=90]
+atlas = ExtResource( 13 )
+region = Rect2( 700, 700, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=91]
+atlas = ExtResource( 13 )
+region = Rect2( 800, 700, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=92]
+atlas = ExtResource( 13 )
+region = Rect2( 900, 700, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=93]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 800, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=94]
+atlas = ExtResource( 13 )
+region = Rect2( 100, 800, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=95]
+atlas = ExtResource( 12 )
+region = Rect2( 400, 100, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=96]
+atlas = ExtResource( 12 )
+region = Rect2( 600, 100, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=97]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 200, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=98]
+atlas = ExtResource( 12 )
+region = Rect2( 200, 200, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=99]
+atlas = ExtResource( 12 )
+region = Rect2( 400, 200, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=100]
+atlas = ExtResource( 12 )
+region = Rect2( 600, 200, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=101]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 300, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=102]
+atlas = ExtResource( 12 )
+region = Rect2( 200, 300, 200, 100 )
+
+[sub_resource type="SpriteFrames" id=103]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "leaving",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "charging",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ) ],
+"loop": true,
+"name": "hit",
+"speed": 60.0
+}, {
+"frames": [ SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ), SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ) ],
+"loop": false,
+"name": "attack",
+"speed": 8.0
+} ]
+
+[sub_resource type="DynamicFont" id=104]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=105]
+size = 40
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 23 )
+
+[sub_resource type="DynamicFont" id=106]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 22 )
+
+[sub_resource type="DynamicFont" id=107]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=108]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 9 )
+
+[node name="Shadow" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 227.0
+texture = ExtResource( 5 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HUDBar" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 227.0
+texture = ExtResource( 4 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Defend" type="TextureProgress" parent="."]
+margin_left = 514.0
+margin_top = -1.0
+margin_right = 1024.0
+margin_bottom = 227.0
+value = 50.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 3 )
+fill_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Attack" type="TextureProgress" parent="."]
+margin_left = 99.0
+margin_top = -1.0
+margin_right = 514.0
+margin_bottom = 226.0
+value = 50.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 1 )
+tint_under = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Center" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 227.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 227.0
+custom_fonts/font = SubResource( 1 )
+text = "Score:
+5555555"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="attackCharge" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -5.0
+
+[node name="shieldCharge" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -10.0
+
+[node name="perSecondTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="enemySpawn" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+__meta__ = {
+"_editor_description_": "Time till the enemy spawns"
+}
+
+[node name="enemyTarget" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+__meta__ = {
+"_editor_description_": "Time till enemy is targetable"
+}
+
+[node name="enemyAttack" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+__meta__ = {
+"_editor_description_": "Time from targetable till attack (Basically, enemy charge time/Vulnerable time)"
+}
+
+[node name="enemyLeave" type="Timer" parent="."]
+one_shot = true
+__meta__ = {
+"_editor_description_": "Time after attack till leave"
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "enemyWizard"
+anims/enemyWizard = SubResource( 2 )
+
+[node name="enemyWizard" type="AnimatedSprite" parent="."]
+position = Vector2( 858.511, 351.453 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 103 )
+animation = "hit"
+frame = 31
+playing = true
+
+[node name="enemyLeft" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="enemyHit" type="Timer" parent="."]
+one_shot = true
+
+[node name="enemyWizardAttack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[node name="enemyWizardCharge" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[node name="enemyWizardSpawn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
+[node name="enemyWizardLeave" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+
+[node name="enemyWizardExplode" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+
+[node name="charged" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+
+[node name="year" type="Label" parent="."]
+margin_left = 174.616
+margin_top = 16.0362
+margin_right = 214.616
+margin_bottom = 52.0362
+custom_fonts/font = SubResource( 104 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog" type="Control" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WizardFace" type="TextureRect" parent="Dialog"]
+margin_left = -18.8988
+margin_top = 396.875
+margin_right = 262.101
+margin_bottom = 660.875
+texture = ExtResource( 20 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WitchFace" type="TextureRect" parent="Dialog"]
+margin_left = 628.62
+margin_top = -3.77551
+margin_right = 1027.62
+margin_bottom = 280.224
+texture = ExtResource( 21 )
+expand = true
+
+[node name="WizardDialog" type="Label" parent="Dialog"]
+margin_left = 286.938
+margin_top = 430.407
+margin_right = 374.938
+margin_bottom = 480.407
+custom_fonts/font = SubResource( 105 )
+text = "Hello"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WitchDialog" type="Label" parent="Dialog"]
+margin_left = 379.438
+margin_top = 69.8467
+margin_right = 419.438
+margin_bottom = 105.847
+custom_fonts/font = SubResource( 106 )
+text = "Henlo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tutShieldTimer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="tutShieldLabel" type="Label" parent="."]
+visible = false
+margin_left = 590.513
+margin_top = 165.09
+margin_right = 1004.51
+margin_bottom = 204.09
+custom_fonts/font = SubResource( 107 )
+text = "Press Right to toggle charging shields!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tutAttackLabel" type="Label" parent="."]
+margin_left = 611.156
+margin_top = 149.671
+margin_right = 961.156
+margin_bottom = 272.671
+custom_fonts/font = SubResource( 108 )
+text = "Press Left to Attack the
+Time Witch while she is charging 
+her attack!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="perSecondTimer" to="." method="_on_perSecondTimer_timeout"]
+[connection signal="timeout" from="enemySpawn" to="." method="_on_enemySpawn_timeout"]
+[connection signal="timeout" from="enemyTarget" to="." method="_on_enemyTarget_timeout"]
+[connection signal="timeout" from="enemyAttack" to="." method="_on_enemyAttack_timeout"]
+[connection signal="timeout" from="enemyLeave" to="." method="_on_enemyLeave_timeout"]
+[connection signal="timeout" from="enemyLeft" to="." method="_on_enemyLeft_timeout"]
+[connection signal="timeout" from="enemyHit" to="." method="_on_enemyHit_timeout"]
+[connection signal="finished" from="charged" to="." method="_on_charged_finished"]
+[connection signal="timeout" from="tutShieldTimer" to="." method="_on_tutShieldTimer_timeout"]

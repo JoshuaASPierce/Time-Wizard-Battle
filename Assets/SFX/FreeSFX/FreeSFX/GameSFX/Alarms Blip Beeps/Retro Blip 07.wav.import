@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Retro Blip 07.wav-5d2bb7fde6fc7a6159decd29562da578.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Alarms Blip Beeps/Retro Blip 07.wav"
+dest_files=[ "res://.import/Retro Blip 07.wav-5d2bb7fde6fc7a6159decd29562da578.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

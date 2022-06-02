@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Retro Blop StereoUP 09.wav-bb7d2b38e21629644511ca1ad3f7fbdf.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Magic/Retro Blop StereoUP 09.wav"
+dest_files=[ "res://.import/Retro Blop StereoUP 09.wav-bb7d2b38e21629644511ca1ad3f7fbdf.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=1

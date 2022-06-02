@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Retro PickUp 10.wav-9b308f6806f02188205d13a52ffdb115.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/PickUp/Retro PickUp 10.wav"
+dest_files=[ "res://.import/Retro PickUp 10.wav-9b308f6806f02188205d13a52ffdb115.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=1

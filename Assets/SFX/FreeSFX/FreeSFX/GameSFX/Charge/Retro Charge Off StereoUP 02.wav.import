@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Retro Charge Off StereoUP 02.wav-2d1ca225dacd8249e1f7c68733550cf2.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Charge/Retro Charge Off StereoUP 02.wav"
+dest_files=[ "res://.import/Retro Charge Off StereoUP 02.wav-2d1ca225dacd8249e1f7c68733550cf2.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=1

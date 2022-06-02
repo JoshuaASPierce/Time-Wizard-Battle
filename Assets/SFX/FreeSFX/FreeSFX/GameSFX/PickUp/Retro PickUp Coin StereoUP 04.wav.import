@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Retro PickUp Coin StereoUP 04.wav-5830c4ac924dcd58f90f524b60b56a13.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/PickUp/Retro PickUp Coin StereoUP 04.wav"
+dest_files=[ "res://.import/Retro PickUp Coin StereoUP 04.wav-5830c4ac924dcd58f90f524b60b56a13.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=1

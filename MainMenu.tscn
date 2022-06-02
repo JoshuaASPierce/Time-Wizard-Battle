@@ -1,0 +1,137 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Font/new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/Font/Bebas_Neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Art/Purple Nebula 8 - 512x512.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Music/Spaceship.wav" type="AudioStream" id=5]
+[ext_resource path="res://Instructions.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Credits.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 90
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "spin"
+length = 30.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 30 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+instructionScene = ExtResource( 6 )
+creditScene = ExtResource( 7 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -736.0
+margin_top = -656.0
+margin_right = 1760.0
+margin_bottom = 1568.0
+rect_pivot_offset = Vector2( 1248, 1112 )
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+custom_constants/separation = 50
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_top = 116.0
+margin_right = 1064.0
+margin_bottom = 224.0
+custom_fonts/font = SubResource( 1 )
+text = "Time Wizard Battle"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 274.0
+margin_right = 1064.0
+margin_bottom = 524.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 207.0
+margin_right = 507.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 300, 200 )
+custom_constants/separation = 50
+
+[node name="Play" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 100 )
+custom_fonts/font = ExtResource( 2 )
+text = "Play"
+
+[node name="Credits" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 150.0
+margin_right = 300.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 200, 100 )
+custom_fonts/font = ExtResource( 2 )
+text = "Credits"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 557.0
+margin_right = 857.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 300, 0 )
+custom_constants/separation = 50
+
+[node name="Instructions" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_right = 300.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 100 )
+custom_fonts/font = ExtResource( 2 )
+text = "Instructions"
+
+[node name="Quit" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 150.0
+margin_right = 300.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 200, 100 )
+custom_fonts/font = ExtResource( 2 )
+text = "Quit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "spin"
+anims/spin = SubResource( 2 )
+
+[node name="mainMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer2/Instructions" to="." method="_on_Instructions_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer2/Quit" to="." method="_on_Quit_pressed"]

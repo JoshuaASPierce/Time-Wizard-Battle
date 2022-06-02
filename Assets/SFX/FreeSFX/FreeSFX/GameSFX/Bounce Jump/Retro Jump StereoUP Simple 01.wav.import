@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Retro Jump StereoUP Simple 01.wav-0973b794bea7398f3eafd2ba2f046e0d.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Bounce Jump/Retro Jump StereoUP Simple 01.wav"
+dest_files=[ "res://.import/Retro Jump StereoUP Simple 01.wav-0973b794bea7398f3eafd2ba2f046e0d.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=1

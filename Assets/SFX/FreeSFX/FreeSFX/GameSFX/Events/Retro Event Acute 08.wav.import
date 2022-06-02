@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Retro Event Acute 08.wav-888285d8394569439b2f42d45c63884a.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Events/Retro Event Acute 08.wav"
+dest_files=[ "res://.import/Retro Event Acute 08.wav-888285d8394569439b2f42d45c63884a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

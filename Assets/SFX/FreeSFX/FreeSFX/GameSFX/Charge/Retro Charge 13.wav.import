@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Retro Charge 13.wav-5d4b7e77eb3d550150504788c01867dd.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Charge/Retro Charge 13.wav"
+dest_files=[ "res://.import/Retro Charge 13.wav-5d4b7e77eb3d550150504788c01867dd.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=1

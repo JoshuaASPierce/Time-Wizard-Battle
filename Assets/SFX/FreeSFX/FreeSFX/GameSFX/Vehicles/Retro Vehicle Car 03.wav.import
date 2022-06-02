@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Retro Vehicle Car 03.wav-15a7ecd38297cb62aee1178e29bbbc5d.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/FreeSFX/FreeSFX/GameSFX/Vehicles/Retro Vehicle Car 03.wav"
+dest_files=[ "res://.import/Retro Vehicle Car 03.wav-15a7ecd38297cb62aee1178e29bbbc5d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
